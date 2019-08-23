@@ -15,6 +15,8 @@ class CreateMyReadsTable extends Migration
     {
         Schema::create('my_reads', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->tinyInteger('user')->index();
+            $table->tinyInteger('asset')->index();
             $table->timestamps();
         });
     }

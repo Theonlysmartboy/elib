@@ -15,6 +15,9 @@ class CreatePrefsTable extends Migration
     {
         Schema::create('prefs', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('p_name');
+            $table->tinyInteger('asset');
+            $table->tinyInteger('status');
             $table->timestamps();
         });
     }
